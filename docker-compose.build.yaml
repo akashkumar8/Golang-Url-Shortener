@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  shorten_urls:
+    image: mysql:5.7
+    container_name: shorten_urls
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: akashdev@123
+      MYSQL_ROOT_USER: root
+      MYSQL_DB: shorten_urls
+    ports:
+      - "3306:3306"
+
+  app:
+    build: .
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./urlshortener:/app
+    depends_on:
+      - shorten_urls
