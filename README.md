@@ -1,2 +1,2 @@
 # Golang-Url-Shortener
-This repo is basically for shortening the url , The stacks is used here Go, MySQL and Docker
+This repository is basically developed for shortening the url , The stacks and technology are used here Go, MySQL and Docker.
